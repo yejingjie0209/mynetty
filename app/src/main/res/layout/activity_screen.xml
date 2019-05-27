@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/ip_address"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="192.168.150.238"
+            android:hint="ip address"
+            android:inputType="textWebEmailAddress" />
+
+        <RadioGroup
+            android:id="@+id/resolution"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:id="@+id/utral_hd"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Utra-HD"/>
+            <RadioButton
+                android:id="@+id/hd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="HD"/>
+            <RadioButton
+                android:id="@+id/sd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="SD"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StopRecord" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="not connected"
+            android:textColor="#ff0100f1" />
+
+        <TextView
+            android:id="@+id/rtt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="--"
+            android:textColor="#ff0100f1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trans_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/search_device"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:text="search device" />
+
+        <Button
+            android:id="@+id/scan"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="扫码" />
+
+        <RadioGroup
+            android:id="@+id/mode"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:id="@+id/tcp_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="tcp"/>
+
+            <RadioButton
+                android:id="@+id/udp_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:text="udp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/device_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#91f1f161" >
+    </ListView>
+
+</LinearLayout>
